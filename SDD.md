@@ -19,8 +19,8 @@ among the individuals listed in the csv file.
 
 ## Table of Contents📖
 
-* [Database](#database)
 * [Scraping](#scraping)
+* [Database](#database)
 * [Pie Chart](#pie chart)
 * [Requirements](#requirements)
 
