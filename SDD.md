@@ -21,7 +21,37 @@ among the individuals listed in the csv file.
 
 * [Database](#database)
 * [Scraping](#scraping)
-* [License](#license)
+* [Pie Chart](#pie chart)
+* [Requirements](#requirements)
+
+## <a name="scraping"></a>Scraping
+
+I am using google search results to scrape the educational data.
+
+I first attempted to find the technologies that would make scraping this type of data
+easier and more accurate i.e. LinkedIn and Rapportive. LinkedIn does not allow
+it's pages to be scraped. And their API was revised to not include people search.
+Your application can request access to custom API endpoints but that would require
+getiing in touch personally and going through vetting process. Not something I could do on a 
+3 day coding challenge. Rapportive used to have an API, from what I have read, but no longer does.
+Too much potential for abuse.
+
+I resorted to google search result scraping paying special attention to
+LinkedIn headlines which appear in a seperate div in google search results, then going through
+the search results descriptions for any traces of educational data for a given name
+search result.
+
+This does not produce the most accurate results. Understanding more about the needs
+of this project I would want to fine tune the scraping results. Perhaps grabbing all
+educational data which comes up in a single google search for that person's name and then email address, and analyzing it, and arriving at most frequently mentioned university or degree for that name. That would yield more accurate results. At the same time, sometimes, it is hard to know
+whether you have the correct person.
+
+I would also try using selenium to possibly scrape LinkedIn's site results, as it seems
+some people have been successful. This woudl require more research as I am not certain
+if thats against LinkedIn's terms of use.
+
+The goal in further pursuing it would be to arrive at better results: either fine tiuning or finding other ways of scraping. So far reasearch on other scraping methods of this particular data
+has proved limiting.
 
 ## <a name="database"></a>Database
 
@@ -33,35 +63,13 @@ In the future, data can be broken out into three tables: name and email, gender,
 university_attended.
 
 All data - the name and email info fed from the csv file and the discovered
-gender and educational data - is encrypted using postgres pgcrypto extension and blowfish algorithm.
+gender and educational data - is encrypted using postgres pgcrypto extension and salted with blowfish algorithm.
 
 Reason for this choice is that it is sensitive data for blind auditions, and pgcrypto
 is highly reliable scalable solution alreday build into postgres.
 
-
-## <a name="scraping"></a>Scraping
-
+## <a name="pie chart"></a>Pie Chart
 
 
-## <a name="license"></a>License
+## <a name="requirements"></a>Requirements
 
-The MIT License (MIT)
-Copyright (c) 2016 Anka Kondraska 
-
-Permission is hereby granted, free of charge, to any person obtaining a copy of
-this software and associated documentation files (the "Software"), to deal in
-the Software without restriction, including without limitation the rights to
-use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies
-of the Software, and to permit persons to whom the Software is furnished to do
-so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.

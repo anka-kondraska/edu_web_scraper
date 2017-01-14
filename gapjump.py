@@ -77,16 +77,7 @@ with open(csv_file) as csvfile1:
 
         data = br.submit()
         soup = BeautifulSoup(data.read(), 'html.parser', from_encoding='utf-8')
-        #each search result description
-        # desc = soup.findAll('span', attrs={'class': 'st'})
-        #linkedin headlines
-        # desc2 = soup.findAll('div', attrs={'class': 'f', 'class' : 'slp'})
-        # for de in desc2:
-        #     print de
-        #     print
-
-
-
+        
         #DEGREE
 
         degree = None
