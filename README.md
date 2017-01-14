@@ -1,6 +1,6 @@
 edu_web_scraper
 
-Overview:
+Overview:<br/>
 edu_web_scraper scrapes the web, specifically google search results for gender and educational information
 based on full name and email address.
 
@@ -10,7 +10,7 @@ and/or email adddress. It also scrapes gednerize.io and behindthename.com for ge
 based on first name.
 
 At this point it is a script file. There is no UI to speak of. To run it in your terminal specify 
-the script file and test names/emails csv file to be discovered:
+the script file and test names/emails csv file to be discovered:<br/>
 python gapjump.py test_profiles.csv
 
 ## Table of Contents📖
