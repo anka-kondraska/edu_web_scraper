@@ -26,6 +26,7 @@ among the individuals listed in the csv file.
 
 ## <a name="scraping"></a>Scraping
 
+I have used a brute force solution once I realized LinkedIn API was not easily avilable for these purposes.
 I am using google search results to scrape the educational data.
 
 I first attempted to find the technologies that would make scraping this type of data
@@ -47,10 +48,10 @@ educational data which comes up in a single google search for that person's name
 whether you have the correct person.
 
 I would also try using selenium to possibly scrape LinkedIn's site results, as it seems
-some people have been successful. This woudl require more research as I am not certain
+some people have been successful. This would require more research as I am not certain
 if thats against LinkedIn's terms of use.
 
-The goal in further pursuing it would be to arrive at better results: either fine tiuning or finding other ways of scraping. So far reasearch on other scraping methods of this particular data
+The goal in further pursuing this would be to arrive at better results: either fine tuning or finding other ways of scraping. So far reasearch on other scraping methods of this particular data
 has proved limiting.
 
 ## <a name="database"></a>Database
@@ -68,8 +69,21 @@ gender and educational data - is encrypted using postgres pgcrypto extension and
 Reason for this choice is that it is sensitive data for blind auditions, and pgcrypto
 is highly reliable scalable solution alreday build into postgres.
 
+Script creating table "profiles" in the vagrant database runs automatically when running the
+gapjump.py script.
+
 ## <a name="pie chart"></a>Pie Chart
+
+Once the script is done running, it generates a pie chart breakdwon of all of the degrees.
+It does so in Matplotlib and saves a png file locally as vms are not able to show to screen.
+To improve it I would like to use chart.js, to increase functionality and UI experience, 
+though Matplotlib is great in a pinch.
 
 
 ## <a name="requirements"></a>Requirements
+
+I am running this script in a vm and in virtual environment. All dependencies are saved in
+requirements.txt for the virtual  environment. I currently have postgres installed only on my vm, and vagrant db created. 
+
+I would continue working with these two environments.
 
