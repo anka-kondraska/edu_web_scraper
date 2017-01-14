@@ -20,9 +20,11 @@ among the individuals listed in the csv file.
 ## Table of Contents📖
 
 * [Scraping](#scraping)
+* [Privacy](#privacy)
 * [Database](#database)
 * [Pie Chart](#pie chart)
 * [Requirements](#requirements)
+* [Testing](#testing)
 
 ## <a name="scraping"></a>Scraping
 
@@ -53,6 +55,13 @@ if thats against LinkedIn's terms of use.
 
 The goal in further pursuing this would be to arrive at better results: either fine tuning or finding other ways of scraping. So far reasearch on other scraping methods of this particular data
 has proved limiting.
+
+Also, need to find tune the regex pattern to be more precise in finding University/College name.
+
+## <a name="privacy"></a>Privacy
+
+I would like to research and find a way to enrcypt data before it is saved in the database so
+that user is never exposed to a raw variable data.
 
 ## <a name="database"></a>Database
 
@@ -86,4 +95,9 @@ I am running this script in a vm and in virtual environment. All dependencies ar
 requirements.txt for the virtual  environment. I currently have postgres installed only on my vm, and vagrant db created. 
 
 I would continue working with these two environments.
+
+## <a name="testing"></a>Testing
+
+I have run incomplete tests which are not included here. Once I have better coverage I'll include
+them.
 
