@@ -19,59 +19,34 @@ among the individuals listed in the csv file.
 
 ## Table of Contents📖
 
-* [Tech Stack](#tech-stack)
-* [Setup/Installation](#installation)
-* [To-Do](#future)
+* [Database](#database)
+* [Scraping](#scraping)
 * [License](#license)
 
-## <a name="tech-stack"></a>Tech Stack
+## <a name="database"></a>Database
 
-__Backend:__ Python 2.7, Matplotlib, Mechanize, BeautifulSoup <br/>
-__Database:__ Postgres<br/>
+The database consists of one table at this time. Once I gain a better understanding
+of this project it can be redone and migrated. As it stand, the one table has six columns:
+last_name, middle_name, first_name, gender, degree_earned, university_attended. 
 
-## <a name="installation"></a>Setup/Installation
+In the future, data can be broken out into three tables: name and email, gender, degree_earned and
+university_attended.
 
-####Requirements:
+All data - the name and email info fed from the csv file and the discovered
+gender and educational data - is encrypted using postgres pgcrypto extension and blowfish algorithm.
 
-- PostgreSQL
-- Python 2.7
-- Vagrant/VM set up 'vagrant' db
+Reason for this choice is that it is sensitive data for blind auditions, and pgcrypto
+is highly reliable scalable solution alreday build into postgres.
 
-To have this app running on your local computer, please follow the below steps:
 
-Clone repository:
-```
-$ git clone https://github.com/skakanka/edu_web_scraper.git
-```
-Create a virtual environment:
-```
-$ virtualenv env
-```
-Activate the virtual environment:
-```
-$ source env/bin/activate
-```
-Install dependencies:
-```
-$ pip install -r requirements.txt
-```
-Run the app from the command line.
-```
-$ python gapjumper.py test_profiles.csv
-```
+## <a name="scraping"></a>Scraping
 
-## <a name="future"></a>TODO
-* Find a way to use LinkedIn API
-* Use OAuth
-* Create User Interface
-* Evaluate ways to encrypt data before it is stored in db
-* Fine tune scraping to get more accurate results
 
 
 ## <a name="license"></a>License
 
 The MIT License (MIT)
-Copyright (c) 2017 Anka Kondraska 
+Copyright (c) 2016 Anka Kondraska 
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of
 this software and associated documentation files (the "Software"), to deal in
