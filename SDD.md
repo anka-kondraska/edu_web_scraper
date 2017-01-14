@@ -1,4 +1,4 @@
-edu_web_scraper
+Software Design Document - SDD for edu_web_scraper
 
 Overview:<br/>
 edu_web_scraper scrapes the web, specifically google search results for gender and educational information
