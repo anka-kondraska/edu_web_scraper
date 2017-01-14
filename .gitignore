@@ -1,2 +1,5 @@
 *.pyc
 *.sh
+env/
+profiles.csv
+snippets.py

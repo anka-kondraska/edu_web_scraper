@@ -4,7 +4,6 @@ import csv
 import re
 import json
 import mechanize
-# import urlparse
 import sys
 import profiles_db
 import degree_pie_chart
@@ -31,7 +30,7 @@ def find_gender(first_name):
     elif gender["gender"] == "male":
         return "M"
     else:
-        # if not found scraping behindthename.com
+        # if not found, scraping behindthename.com
         name_f = soup2.find(class_="fem")
         name_m = soup2.find(class_="masc")
         error = soup2.find('p', attrs={'class' : 'error'})
@@ -161,8 +160,9 @@ with open(csv_file) as csvfile1:
         # Add to database
         profiles_db.add_to_db(first_name, last_name, degree, university)
             
-
+# close the csv file
 csvfile1.close()
+# generate pie chart upon completion
 degree_pie_chart.create_pie_chart(count_degrees)
 
 
