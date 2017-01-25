@@ -35,7 +35,7 @@ I first attempted to find the technologies that would make scraping this type of
 easier and more accurate i.e. LinkedIn and Rapportive. LinkedIn does not allow
 it's pages to be scraped. And their API was revised to not include people search.
 Your application can request access to custom API endpoints but that would require
-getiing in touch personally and going through vetting process. Not something I could do on a 
+getting in touch personally and going through vetting process. Not something I could do on a 
 3 day coding challenge. Rapportive used to have an API, from what I have read, but no longer does.
 Too much potential for abuse.
 
@@ -66,7 +66,7 @@ that user is never exposed to a raw variable data.
 ## <a name="database"></a>Database
 
 The database consists of one table at this time. Once I gain a better understanding
-of this project it can be redone and migrated. As it stand, the one table has six columns:
+of this project it can be redone and migrated. As it stands, the one table has six columns:
 last_name, middle_name, first_name, gender, degree_earned, university_attended. 
 
 In the future, data can be broken out into three tables: name and email, gender, degree_earned and
